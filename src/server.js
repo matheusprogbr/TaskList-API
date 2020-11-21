@@ -1,7 +1,10 @@
 import express from 'express';
 import routes from './routes';
+import init from './database';
 
 const server = express();
+
+init();
 
 server.use(express.json());
 server.use(routes);

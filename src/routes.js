@@ -1,9 +1,9 @@
 import express from 'express';
+import user from './app/controllers/user';
 
 const routes = express.Router();
 
-routes.get('/', (req, res) => {
-  res.json({ msg: 'Hello Teste!' });
-});
+routes.get('/', user.index);
+routes.post('/user', user.create);
 
 export default routes;
