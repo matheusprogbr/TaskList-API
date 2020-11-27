@@ -21,6 +21,9 @@ const user = {
 
     return res.status(201).json({ result });
   },
+  update: async (req, res) => {
+    return res.json({ msg: req.userId });
+  },
 };
 
 export default user;
