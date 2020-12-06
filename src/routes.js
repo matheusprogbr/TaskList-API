@@ -7,11 +7,10 @@ const routes = express.Router();
 
 routes.get('/', user.index);
 routes.post('/users', user.store);
+routes.post('/sessions', session.store);
 
 routes.use(authMiddleware);
 
 routes.put('/users', user.update);
-
-routes.post('/sessions', session.store);
 
 export default routes;
